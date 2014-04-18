@@ -1,7 +1,7 @@
 /**
- * @author Jon Ausherman
+ * @author Jon Ausherman, James Wasson
  * @date Apr 16, 2014
- * @version 4.2
+ * @version 5.0
  * @description accpets a list of names to lest from randomly
  * uses a default list if chosen
  * 
@@ -20,16 +20,14 @@ public class RandomNameGenorator {
 	
 	public Random ran = new Random();
 	
-	
-	
 	//user defined list of names
 	ArrayList<String> ranNames = new ArrayList<String>();
 	
 	//the default list of names
 	private String defNames[] = {"Austin","Jon A","Jon B","Jon L","Alex","Acacia","Yun","Griffen","James","JJ",
-			"Mr. Wright","Ryan","Jonah","Tenzin","Ann","Elizebth","Levi","Hunter","Samuel",
-			"Nitin","Matt","Shawn","Robert","Logan","Jackson"};
-	
+			"Mr. Wright","Jonah","Tenzin","Ann","Elizebth","Levi","Hunter","Samuel",
+			"Nitin","Matt","Shawn","Robert","Logan","Jackson","Ryan"};
+	private int defNamesCount[] = new int [defNames.length];
 	//prints out the default names
 	public void getDefNames(){
 		for(String name : defNames){
@@ -43,9 +41,8 @@ public class RandomNameGenorator {
 			System.out.println(name);
 		}
 	}
-	
 	//returns a random number for the default array
-	public int getDefRanNum(){
+	public int getRanDefNum(){
 		
 		return ran.nextInt(defNames.length);
 		
@@ -61,9 +58,32 @@ public class RandomNameGenorator {
 	
 	//returns a string name from the default names list
 	public String getRanDefName(){
-		return defNames[getDefRanNum()];
+		return getUniqueDefName();
 	}
 	
+	//returns a unique string name from the default names list
+	public String getUniqueDefName(){
+		int a = -1;
+		do{
+		    a = getRanDefNum();
+		}
+		while (defNamesCount[a] != min(defNamesCount));
+		defNamesCount[a]++;
+		updateFile();
+	    return defNames[a];
+	}
+	
+	//returns smallest value of the array
+	public static int min(int a[]){
+	    int j = a[0];
+	    for (int i = 0; i < a.length; i++)
+	        if (a[j] > a[i])
+	            j = i;
+	            
+	    return a[j];
+	}
+	   
+	   
 	//returns a string name from the user's names list
 	public String getRanMyName(){
 		/**
@@ -151,5 +171,13 @@ public class RandomNameGenorator {
 		return "You can \"phone\": " + getRanMyName() + ", "+ 
 		getRanMyName() + ", or "+ getRanMyName() + ".";
 		
+	}
+	public void updateFile(){
+	    String HEHEHE = "hehehehehehehehehehehe";
+	    HEHEHE = null;
+	    String eight = "8";
+	    int ate = 8;
+	    eight = null;
+	    ate = 1337;
 	}
 }
