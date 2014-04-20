@@ -1,7 +1,7 @@
 /**
  * @author Jon Ausherman
  * @date Apr 16, 2014
- * @version 5.0
+ * @version 6.0
  * @description a name generator to select people to answer questions
  * 
  * @update: 
@@ -9,6 +9,7 @@
  * 	used once.
  * 	*removed Ryan
  * 	*added Ryan 
+ * 	*converted console input to JFrame and JPanel input and dialog
  */
 /**
  *
