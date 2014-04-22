@@ -1,7 +1,7 @@
 /**
  * @author Jon Ausherman, James Wasson
  * @date Apr 16, 2014
- * @version 5.0
+ * @version 5.2
  * @description accpets a list of names to lest from randomly
  * uses a default list if chosen
  * 
@@ -24,23 +24,11 @@ public class RandomNameGenorator {
 	ArrayList<String> ranNames = new ArrayList<String>();
 	
 	//the default list of names
-	private String defNames[] = {"Austin","Jon A","Jon B","Jon L","Alex","Acacia","Yun","Griffen","James","JJ",
-			"Mr. Wright","Jonah","Tenzin","Ann","Elizebth","Levi","Hunter","Samuel",
+	private String defNames[] = {"Austin","Jon A","Jon B","Jon L","Alex","Aquacia","Yun","Griffen","James","JJ",
+			"Mr. Wright","Jonah","Tenzin","Ann","Elizabeth","Levi","Hunter","Samuel",
 			"Nitin","Matt","Shawn","Robert","Logan","Jackson","Ryan"};
 	private int defNamesCount[] = new int [defNames.length];
-	//prints out the default names
-	public void getDefNames(){
-		for(String name : defNames){
-			System.out.println(name);
-		}
-	}
 	
-	//prints out the user's list of names
-	public void getRanNames(){
-		for(String name : ranNames){
-			System.out.println(name);
-		}
-	}
 	//returns a random number for the default array
 	public int getRanDefNum(){
 		
@@ -58,7 +46,7 @@ public class RandomNameGenorator {
 	
 	//returns a string name from the default names list
 	public String getRanDefName(){
-		return getUniqueDefName();
+		return defNames[getRanDefNum()];
 	}
 	
 	//returns a unique string name from the default names list

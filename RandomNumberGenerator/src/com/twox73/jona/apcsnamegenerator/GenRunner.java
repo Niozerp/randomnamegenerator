@@ -1,7 +1,7 @@
 /**
- * @author Jon Ausherman
+ * @author Jon Ausherman/
  * @date Apr 16, 2014
- * @version 6.0
+ * @version 6.05
  */
 package com.twox73.jona.apcsnamegenerator;
 
@@ -87,11 +87,12 @@ public class GenRunner extends JFrame {
 			}
 		});
 		
+		//displays names from ap class
 		genRanDefName.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(genFrame, nameList.getRanDefName() +"\n"+nameList.getRanDefPhone());
+				JOptionPane.showMessageDialog(genFrame, nameList.getUniqueDefName() +"\n"+nameList.getRanDefPhone());
 				
 			}
 		});
