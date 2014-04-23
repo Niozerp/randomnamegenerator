@@ -1,7 +1,7 @@
 /**
  * @author Jon Ausherman/
  * @date Apr 16, 2014
- * @version 6.05
+ * @version 6.1
  */
 package com.twox73.jona.apcsnamegenerator;
 
@@ -41,7 +41,7 @@ public class GenRunner extends JFrame {
 		//objects to be added to btP
 		JButton addUserName = new JButton("Add a Name");
 		JButton genRanUserName = new JButton("Generate from my list");
-		JButton genRanDefName = new JButton("Genderate from the default list");
+		JButton genRanDefName = new JButton("Generate from the default list");
 		
 		//exti controls
 		genFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

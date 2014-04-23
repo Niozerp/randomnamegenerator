@@ -12,6 +12,8 @@
  * 	*converted console input to JFrame and JPanel input and dialog
  *  *spelled Elizibeth's name right
  *  *more random phone names
+ *  *changed 'acacia' to 'aquacia'
+ *  *fixed 'genderate'
  */
 /**
  *

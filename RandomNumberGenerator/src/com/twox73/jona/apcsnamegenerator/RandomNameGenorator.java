@@ -161,11 +161,6 @@ public class RandomNameGenorator {
 		
 	}
 	public void updateFile(){
-	    String HEHEHE = "hehehehehehehehehehehe";
-	    HEHEHE = null;
-	    String eight = "8";
-	    int ate = 8;
-	    eight = null;
-	    ate = 1337;
+	   
 	}
 }
