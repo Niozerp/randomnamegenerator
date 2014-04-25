@@ -16,39 +16,39 @@ public class RandomNameGenorator {
 	public RandomNameGenorator(ArrayList<String> userSt){
 		ranNames = userSt;
 	}
-	
-	
+
+
 	public Random ran = new Random();
-	
+
 	//user defined list of names
 	ArrayList<String> ranNames = new ArrayList<String>();
-	
+
 	//the default list of names
-	private String defNames[] = {"Austin","Jon A","Jon B","Jon L","Alex","Aquacia","Yun","Griffen","James","JJ",
+	private String defNames[] = {"Austin: the Great All-Powerful Supreme-Leader Being Of All Human-Pandas","Jon A: The Master Debugger","Jon B","Jon L","Alex","The Great and Might Saint of Washing Machines: Aquacia","Yun","Griffen","James","JJ",
 			"Mr. Wright","Jonah","Tenzin","Ann","Elizabeth","Levi","Hunter","Samuel",
 			"Nitin","Matt","Shawn","Robert","Logan","Jackson","Ryan"};
 	private int defNamesCount[] = new int [defNames.length];
-	
+
 	//returns a random number for the default array
 	public int getRanDefNum(){
-		
+
 		return ran.nextInt(defNames.length);
-		
+
 	}
-	
-	
+
+
 	//returns a random number for the user's list
 	public int getMyRanNum(){
 		return ran.nextInt(ranNames.size());
 	}
-	
+
 	//checks to see if the user inputed anything
-	
+
 	//returns a string name from the default names list
 	public String getRanDefName(){
 		return defNames[getRanDefNum()];
 	}
-	
+
 	//returns a unique string name from the default names list
 	public String getUniqueDefName(){
 		int a = -1;
@@ -60,18 +60,18 @@ public class RandomNameGenorator {
 		updateFile();
 	    return defNames[a];
 	}
-	
+
 	//returns smallest value of the array
 	public static int min(int a[]){
-	    int j = a[0];
+	    int j = 0;
 	    for (int i = 0; i < a.length; i++)
 	        if (a[j] > a[i])
 	            j = i;
-	            
+
 	    return a[j];
 	}
-	   
-	   
+
+
 	//returns a string name from the user's names list
 	public String getRanMyName(){
 		/**
@@ -99,18 +99,18 @@ public class RandomNameGenorator {
 		}while(exCh<3);
 		return nm;
 		*/
-		
+
 		return ranNames.get(getMyRanNum());
 	}
-	
+
 	//returns a string with names from the default list that the people can phone
 	public String getRanDefPhone(){
-		
+
 		String nm[] = new String[3];
 		nm[0]=getRanDefName();
 		nm[1]=getRanDefName();
 		nm[2]=getRanDefName();
-		
+
 		for(int i=0;i<2;i++){
 			nm[i]=getRanDefName();
 			if(nm[0].equalsIgnoreCase(nm[1])||nm[1].equalsIgnoreCase(nm[2])){
@@ -119,12 +119,12 @@ public class RandomNameGenorator {
 				nm[i+1]=getRanDefName();
 			}
 		}
-			
+
 		return "You can \"phone\": " + nm[0] + ", "+ 
 				nm[1] + ", or "+ nm[2] + ".";
-		
+
 	}
-	
+
 	//returns a string with names from the user's list that people can phone
 	public String getRanMyPhone(){
 		/**
@@ -155,12 +155,17 @@ public class RandomNameGenorator {
 				nm[1] + ", or "+ nm[2] + ".";
 		
 		*/
-		
+
 		return "You can \"phone\": " + getRanMyName() + ", "+ 
 		getRanMyName() + ", or "+ getRanMyName() + ".";
-		
+
 	}
 	public void updateFile(){
-	   
+	    String HEHEHE = "hehehehehehehehehehehe";
+	    HEHEHE = null;
+	    String eight = "8";
+	    int ate = 8;
+	    eight = null;
+	    ate = 1337;
 	}
 }
